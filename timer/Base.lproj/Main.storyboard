@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
@@ -671,32 +671,19 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="TView" customModule="timer" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="221"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yu3-Ej-Xn6" customClass="CircularProgressView" customModule="ProgressKit">
-                                <rect key="frame" x="0.0" y="-1" width="200" height="200"/>
-                                <subviews>
-                                    <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3e-Kr-uov">
-                                        <rect key="frame" x="20" y="19" width="160" height="162"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="VsF-iy-w2p"/>
-                                            <constraint firstAttribute="height" constant="160" id="qOw-hU-rpH"/>
-                                        </constraints>
-                                        <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="0.64140045574400939" allowsTickMarkValuesOnly="YES" sliderType="circular" id="xd7-Ym-LPz"/>
-                                        <connections>
-                                            <action selector="slider:" target="XfG-lQ-9wD" id="414-Nh-Xc5"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yu3-Ej-Xn6" customClass="CircularProgressView" customModule="ProgressKit">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="5PX-Ju-qoQ"/>
                                     <constraint firstAttribute="height" constant="200" id="K4q-MV-DW3"/>
                                 </constraints>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-RS-DBp">
-                                <rect key="frame" x="67" y="86" width="66" height="60"/>
+                                <rect key="frame" x="67" y="87" width="66" height="60"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="60" id="t47-4t-qek">
                                     <font key="font" size="79" name="DINCondensed-Bold"/>
                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -704,7 +691,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKL-eL-2a8">
-                                <rect key="frame" x="80" y="38" width="40" height="40"/>
+                                <rect key="frame" x="80" y="39" width="40" height="40"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00" id="hnb-f3-Oqx">
                                     <font key="font" size="42" name="DINCondensed-Bold"/>
                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -717,12 +704,11 @@
                         <outlet property="lblMinutes" destination="0Zb-RS-DBp" id="oCu-Qi-eKM"/>
                         <outlet property="lblSeconds" destination="ZKL-eL-2a8" id="r29-bD-xPY"/>
                         <outlet property="progress" destination="Yu3-Ej-Xn6" id="Akd-rK-pwI"/>
-                        <outlet property="slider" destination="p3e-Kr-uov" id="Wqh-Mg-iT6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="770"/>
+            <point key="canvasLocation" x="258" y="656.5"/>
         </scene>
     </scenes>
 </document>

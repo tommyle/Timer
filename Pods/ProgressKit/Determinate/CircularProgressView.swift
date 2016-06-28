@@ -87,6 +87,11 @@ public class CircularProgressView: DeterminateAnimation {
             arcPath.appendBezierPathWithArcWithCenter(rect.mid, radius: radius, startAngle: startAngle, endAngle: (startAngle - 360), clockwise: true)
             progressLayer.path = arcPath.CGPath
             self.layer?.addSublayer(progressLayer)
+            
+            progressLayer.shadowRadius = 4.0;
+            progressLayer.shadowColor = foreground.CGColor
+            progressLayer.shadowOpacity = 0.5;
+            progressLayer.shadowOffset = CGSizeMake(0.0, 0.0);
         }
 
         // Percentage Layer

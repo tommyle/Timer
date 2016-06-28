@@ -8,29 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		662A563D88933F0162C60BE6 /* Pods_timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8367E9CD5330617BD806F92C /* Pods_timer.framework */; };
+		720C4B1F1D0782840012A185 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C4B1E1D0782840012A185 /* TimerView.swift */; };
+		720C4B211D0782A90012A185 /* TimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720C4B201D0782A90012A185 /* TimerView.xib */; };
 		721CD24C1CD858210090F130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721CD24B1CD858210090F130 /* AppDelegate.swift */; };
 		721CD24E1CD858210090F130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721CD24D1CD858210090F130 /* ViewController.swift */; };
 		721CD2511CD858210090F130 /* timer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 721CD24F1CD858210090F130 /* timer.xcdatamodeld */; };
-		721CD2531CD858210090F130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721CD2521CD858210090F130 /* Assets.xcassets */; };
 		721CD2561CD858210090F130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721CD2541CD858210090F130 /* Main.storyboard */; };
 		721CD25E1CD8B70D0090F130 /* PT DIN Condensed Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 721CD25D1CD8B70D0090F130 /* PT DIN Condensed Cyrillic.ttf */; };
 		721CD2601CD8C4C50090F130 /* kettle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 721CD25F1CD8C4C50090F130 /* kettle.mp3 */; };
 		721CD2621CD8C7210090F130 /* TView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721CD2611CD8C7210090F130 /* TView.swift */; };
+		72C485C41CD973FB007B6FDC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C485C31CD973FB007B6FDC /* Helper.swift */; };
+		72C485C61CD97BE6007B6FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C485C51CD97BE6007B6FDC /* Assets.xcassets */; };
+		72C485C91CD995F3007B6FDC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C485C71CD995F3007B6FDC /* MenuViewController.swift */; };
+		72C485CA1CD995F3007B6FDC /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C485C81CD995F3007B6FDC /* MenuViewController.xib */; };
+		72C485CC1CD99958007B6FDC /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C485CB1CD99958007B6FDC /* EventMonitor.swift */; };
+		72C485CE1CDA1389007B6FDC /* TSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C485CD1CDA1389007B6FDC /* TSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C2B23F600A060F93A0C5BE7 /* Pods-timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.release.xcconfig"; sourceTree = "<group>"; };
 		4067EEF025658575DF4D7427 /* Pods-timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.debug.xcconfig"; sourceTree = "<group>"; };
+		720C4B1E1D0782840012A185 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		720C4B201D0782A90012A185 /* TimerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerView.xib; sourceTree = "<group>"; };
 		721CD2481CD858210090F130 /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		721CD24B1CD858210090F130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		721CD24D1CD858210090F130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		721CD2501CD858210090F130 /* timer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = timer.xcdatamodel; sourceTree = "<group>"; };
-		721CD2521CD858210090F130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		721CD2551CD858210090F130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		721CD2571CD858210090F130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		721CD25D1CD8B70D0090F130 /* PT DIN Condensed Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT DIN Condensed Cyrillic.ttf"; sourceTree = "<group>"; };
 		721CD25F1CD8C4C50090F130 /* kettle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kettle.mp3; sourceTree = "<group>"; };
 		721CD2611CD8C7210090F130 /* TView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TView.swift; sourceTree = "<group>"; };
+		72C485C31CD973FB007B6FDC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		72C485C51CD97BE6007B6FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72C485C71CD995F3007B6FDC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		72C485C81CD995F3007B6FDC /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		72C485CB1CD99958007B6FDC /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		72C485CD1CDA1389007B6FDC /* TSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSlider.swift; sourceTree = "<group>"; };
 		8367E9CD5330617BD806F92C /* Pods_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,17 +90,32 @@
 		721CD24A1CD858210090F130 /* timer */ = {
 			isa = PBXGroup;
 			children = (
-				721CD25F1CD8C4C50090F130 /* kettle.mp3 */,
+				72C485CF1CDA1A14007B6FDC /* Supporting Files */,
+				72C485C51CD97BE6007B6FDC /* Assets.xcassets */,
 				721CD24B1CD858210090F130 /* AppDelegate.swift */,
 				721CD24D1CD858210090F130 /* ViewController.swift */,
-				721CD2521CD858210090F130 /* Assets.xcassets */,
 				721CD2541CD858210090F130 /* Main.storyboard */,
+				721CD2611CD8C7210090F130 /* TView.swift */,
+				72C485C31CD973FB007B6FDC /* Helper.swift */,
+				72C485C71CD995F3007B6FDC /* MenuViewController.swift */,
+				72C485C81CD995F3007B6FDC /* MenuViewController.xib */,
+				72C485CB1CD99958007B6FDC /* EventMonitor.swift */,
+				72C485CD1CDA1389007B6FDC /* TSlider.swift */,
+				720C4B1E1D0782840012A185 /* TimerView.swift */,
+				720C4B201D0782A90012A185 /* TimerView.xib */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
+		72C485CF1CDA1A14007B6FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				721CD25F1CD8C4C50090F130 /* kettle.mp3 */,
 				721CD2571CD858210090F130 /* Info.plist */,
 				721CD24F1CD858210090F130 /* timer.xcdatamodeld */,
 				721CD25D1CD8B70D0090F130 /* PT DIN Condensed Cyrillic.ttf */,
-				721CD2611CD8C7210090F130 /* TView.swift */,
 			);
-			path = timer;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8C9B94D8A7AD09F3CC253342 /* Frameworks */ = {
@@ -160,7 +189,9 @@
 			files = (
 				721CD25E1CD8B70D0090F130 /* PT DIN Condensed Cyrillic.ttf in Resources */,
 				721CD2601CD8C4C50090F130 /* kettle.mp3 in Resources */,
-				721CD2531CD858210090F130 /* Assets.xcassets in Resources */,
+				72C485CA1CD995F3007B6FDC /* MenuViewController.xib in Resources */,
+				72C485C61CD97BE6007B6FDC /* Assets.xcassets in Resources */,
+				720C4B211D0782A90012A185 /* TimerView.xib in Resources */,
 				721CD2561CD858210090F130 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,10 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720C4B1F1D0782840012A185 /* TimerView.swift in Sources */,
 				721CD24E1CD858210090F130 /* ViewController.swift in Sources */,
+				72C485C91CD995F3007B6FDC /* MenuViewController.swift in Sources */,
 				721CD2621CD8C7210090F130 /* TView.swift in Sources */,
 				721CD2511CD858210090F130 /* timer.xcdatamodeld in Sources */,
+				72C485CC1CD99958007B6FDC /* EventMonitor.swift in Sources */,
+				72C485C41CD973FB007B6FDC /* Helper.swift in Sources */,
 				721CD24C1CD858210090F130 /* AppDelegate.swift in Sources */,
+				72C485CE1CDA1389007B6FDC /* TSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

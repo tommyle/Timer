@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TimerView" customModule="timer" customModuleProvider="target">
+            <connections>
+                <outlet property="lblMinutes" destination="Gdv-tr-7Da" id="aDd-hD-Bll"/>
+                <outlet property="lblSeconds" destination="QMC-XM-E0g" id="jsS-Xm-H6H"/>
+                <outlet property="progress" destination="v24-0u-Cgr" id="0cv-Pf-x2Y"/>
+                <outlet property="slider" destination="mM0-OH-xk1" id="773-5P-YI6"/>
+                <outlet property="view" destination="c22-O7-iKe" id="5sl-hj-frQ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v24-0u-Cgr" customClass="CircularProgressView" customModule="ProgressKit">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <subviews>
+                        <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-OH-xk1">
+                            <rect key="frame" x="20" y="19" width="160" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="160" id="T74-Pq-XvY"/>
+                                <constraint firstAttribute="width" constant="160" id="dYS-my-lVN"/>
+                            </constraints>
+                            <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="0.64140045574400939" allowsTickMarkValuesOnly="YES" sliderType="circular" id="cX3-f6-mtu"/>
+                        </slider>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-I2-fbX">
+                            <rect key="frame" x="7" y="6" width="25" height="25"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="StatusBarButtonImage" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="ifs-R2-9wm">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="smallSystem"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Gee-LB-vV7"/>
+                        <constraint firstAttribute="width" constant="200" id="nFd-kr-7ss"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMC-XM-E0g">
+                    <rect key="frame" x="80" y="39" width="40" height="40"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00" id="391-Hg-DK9">
+                        <font key="font" size="42" name="DINCondensed-Bold"/>
+                        <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gdv-tr-7Da">
+                    <rect key="frame" x="67" y="87" width="66" height="60"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="60" id="myI-Ed-Acs">
+                        <font key="font" size="79" name="DINCondensed-Bold"/>
+                        <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="188" y="250"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="StatusBarButtonImage" width="16" height="16"/>
+    </resources>
+</document>

@@ -16,5 +16,4 @@ class TView: NSView {
 //        NSColor.clearColor().set()
 //        NSRectFill(dirtyRect);
     }
-    
 }

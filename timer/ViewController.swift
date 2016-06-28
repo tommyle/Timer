@@ -18,17 +18,27 @@ class ViewController: NSViewController {
     weak var timer = NSTimer?()
     var seconds: Int = 0
     var audioPlayer:AVAudioPlayer!
+    var appDelegate:AppDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
+        
         self.slider.alphaValue = 0.0
+//        self.slider.layer?.backgroundColor = NSColor.greenColor().CGColor
         self.slider.continuous = true
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
         
         self.slider.doubleValue = 1.0
         self.progress.progress = 1.0
+        
+        self.progress.setValue(Helper.NSColorFromRGB(0x576360), forKey: "background")
+        self.progress.setValue(10, forKey: "strokeWidth")
+        self.progress.setValue(false, forKey: "showPercent")
+        self.progress.setValue(Helper.NSColorFromRGB(0x3BB3D4), forKey: "foreground")
+        self.progress.setValue(1.0, forKey: "progress")
     }
     
     override func viewDidAppear() {
@@ -63,6 +73,8 @@ class ViewController: NSViewController {
         self.lblMinutes.stringValue = String(format: "%02d", Int(self.progress.progress * 60))
         self.lblSeconds.stringValue = String(format: "%02d", seconds)
         
+        self.appDelegate.statusItem.title = String(format: "%02d:%02d", Int(self.progress.progress * 60), seconds)
+        
         if (timer == nil) {
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
         }
@@ -93,6 +105,8 @@ class ViewController: NSViewController {
         
         self.lblMinutes.stringValue = String(format: "%02d", Int(self.progress.progress * 60))
         self.lblSeconds.stringValue = String(format: "%02d", seconds)
+        
+        self.appDelegate.statusItem.title = String(format: "%02d:%02d", Int(self.progress.progress * 60), seconds)
     }
 }
 

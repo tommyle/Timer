@@ -9,13 +9,33 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
 
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(70)
+    
+    let popover = NSPopover()
+    
+    var eventMonitor: EventMonitor?
 
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        if let button = statusItem.button {
+//            button.image = NSImage(named: "StatusBarButtonImage")
+            button.action = #selector(AppDelegate.togglePopover(_:))
+        }
         
+        statusItem.title = "🕕 59:59";
+        
+        popover.contentViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        popover.animates = false
+        
+        eventMonitor = EventMonitor(mask: [.LeftMouseDownMask, .RightMouseDownMask]) { [unowned self] event in
+            if self.popover.shown {
+                self.closePopover(event)
+            }
+        }
+        eventMonitor?.start()
+        
+        NSUserNotificationCenter.defaultUserNotificationCenter().delegate = self
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -163,5 +183,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return .TerminateNow
     }
 
+    func showPopover(sender: AnyObject?) {
+        if let button = statusItem.button {
+            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
+        }
+        
+        eventMonitor?.start()
+    }
+    
+    func closePopover(sender: AnyObject?) {
+        popover.performClose(sender)
+        
+        eventMonitor?.stop()
+    }
+    
+    func togglePopover(sender: AnyObject?) {
+        if popover.shown {
+            closePopover(sender)
+        } else {
+            showPopover(sender)
+        }
+    }
+    
+    
+    func userNotificationCenter(center: NSUserNotificationCenter, shouldPresentNotification notification: NSUserNotification) -> Bool {
+        // return true to always display the User Notification
+        return true
+    }
+    
+    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
+    }
 }
 
